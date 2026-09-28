@@ -1,0 +1,23 @@
+name: GitHub Actions - ${{ github.actor }}
+
+on:
+  pull_request:
+
+env:
+  GITHUB_ACTIONS: "true"
+
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show GITHUB_ACTIONS
+        run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
+
+      - name: Show branch and repository
+        run: |
+          echo "Branch: ${{ github.head_ref }}"
+          echo "Repository: ${{ github.repository }}"
+
+      - name: Show triggering event
+        run: echo "Event: ${{ github.event_name }}"
