@@ -1,4 +1,5 @@
-name: GitHub Actions - ${{ github.actor }}
+name: GitHub Actions Task
+run-name: GitHub Actions - ${{ github.actor }}
 
 on:
   pull_request:
