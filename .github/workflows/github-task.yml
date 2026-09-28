@@ -12,7 +12,8 @@ jobs:
 
     steps:
       - name: Show GITHUB_ACTIONS
-        run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
+        run: |
+          echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
 
       - name: Show branch and repository
         run: |
@@ -20,4 +21,5 @@ jobs:
           echo "Repository: ${{ github.repository }}"
 
       - name: Show triggering event
-        run: echo "Event: ${{ github.event_name }}"
+        run: |
+          echo "Event: ${{ github.event_name }}"
